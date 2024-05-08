@@ -1,0 +1,15 @@
+{
+    "builds": [
+      {
+        "src": "src",
+        "use": "@vercel/php-build",
+        "buildCommand": "composer install && npm install && php artisan cache:clear"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/index.php",
+        "dest": "/"
+      }
+    ]
+}
